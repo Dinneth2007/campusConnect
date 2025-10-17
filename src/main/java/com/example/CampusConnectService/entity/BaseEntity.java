@@ -1,6 +1,6 @@
 package com.example.CampusConnectService.entity;
 
-import com.example.CampusConnectService.audit.AuditorAwareImpl;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,9 +10,9 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
-@EntityListeners(AuditorAwareImpl.class)
+@EntityListeners(AuditingEntityListener.class)
 @MappedSuperclass
 @Getter
 @Setter
@@ -23,19 +23,18 @@ public class BaseEntity {
     private Long id;
 
     @CreatedDate
-    @Column(updatable = false)
-    private LocalDateTime createdAt;
+    @Column(nullable = false, updatable = false)
+    private Instant createdAt;
 
     @CreatedBy
     @Column(updatable = false)
     private String createdBy;
 
     @LastModifiedDate
-    @Column(insertable = false)
-    private LocalDateTime updatedAt;
+    @Column(nullable = true)
+    private Instant updatedAt;
 
     @LastModifiedBy
-    @Column(insertable = false )
     private String updatedBy;
 
 }
