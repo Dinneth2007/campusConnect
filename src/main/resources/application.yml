@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: QuizApp
+  datasource:
+    url: jdbc:mysql://localhost:3306/campusConnect?createDatabaseIfNotExist=true
+    username: root
+    password: dinneth123
+  jpa:
+    hibernate:
+      ddl-auto: update
