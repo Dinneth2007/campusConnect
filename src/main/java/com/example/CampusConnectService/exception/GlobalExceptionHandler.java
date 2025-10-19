@@ -25,6 +25,6 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> handleAll(Exception ex) {
         ex.printStackTrace();
-        return ResponseEntity.internalServerError().body("An unexpected error occurred");
+        return ResponseEntity.internalServerError().body("An unexpected error occurred "+ex.getMessage());
     }
 }
