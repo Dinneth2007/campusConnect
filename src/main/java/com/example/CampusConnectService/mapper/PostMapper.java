@@ -4,6 +4,7 @@ import com.example.CampusConnectService.dto.PostResponseDto;
 import com.example.CampusConnectService.entity.Post;
 import com.example.CampusConnectService.entity.Tag;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 import java.util.Collections;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.stream.Collectors;
 
 @Mapper(componentModel = "spring")
 public interface PostMapper {
+    @Mapping(source = "author.id", target = "authorId")
     PostResponseDto toDto(Post post);
     List<PostResponseDto> toDtoList(List<Post> posts);
 

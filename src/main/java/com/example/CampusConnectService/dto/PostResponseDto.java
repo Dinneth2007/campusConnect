@@ -1,6 +1,5 @@
 package com.example.CampusConnectService.dto;
 
-import com.example.CampusConnectService.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -13,7 +12,7 @@ public class PostResponseDto {
     private Long id;
     private String title;
     private String content;
-    private User author;
+    private Long authorId;
     private Set<String> tags;
     private Instant createdAt;
 }
