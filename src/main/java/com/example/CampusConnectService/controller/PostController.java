@@ -1,8 +1,7 @@
 package com.example.CampusConnectService.controller;
 
-import com.example.CampusConnectService.dto.PostCreateDto;
+import com.example.CampusConnectService.dto.Post.PostCreateDto;
 import com.example.CampusConnectService.dto.PostResponseDto;
-import com.example.CampusConnectService.entity.Post;
 import com.example.CampusConnectService.entity.User;
 import com.example.CampusConnectService.exception.ResourceNotFoundException;
 import com.example.CampusConnectService.repository.UserRepository;
@@ -48,8 +47,7 @@ public class PostController {
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
 
-        Page<PostResponseDto> posts = postService.getAllPosts(PageRequest.of(page, size, Sort.by("createdAt").descending()));
-        return posts;
+        return postService.getAllPosts(PageRequest.of(page, size, Sort.by("createdAt").descending()));
     }
 
     @DeleteMapping("/{id}")
@@ -58,6 +56,7 @@ public class PostController {
         postService.softDeletePost(id, user.getId());
         return ResponseEntity.noContent().build();
     }
+    
 
 
 }

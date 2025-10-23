@@ -1,4 +1,4 @@
-package com.example.CampusConnectService.dto;
+package com.example.CampusConnectService.dto.Post;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Data
-public class PostCreateDto {
+public class PostUpdateDto {
     @NotBlank
     private String title;
     @NotBlank

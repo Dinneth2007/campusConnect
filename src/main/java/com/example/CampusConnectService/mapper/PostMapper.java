@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 @Mapper(componentModel = "spring")
 public interface PostMapper {
     @Mapping(source = "author.id", target = "authorId")
+//    @Mapping(source = "author.name", target = "authorName")
     PostResponseDto toDto(Post post);
     List<PostResponseDto> toDtoList(List<Post> posts);
 

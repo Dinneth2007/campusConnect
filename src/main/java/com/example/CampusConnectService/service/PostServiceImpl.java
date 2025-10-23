@@ -1,8 +1,8 @@
 package com.example.CampusConnectService.service;
 
-import com.example.CampusConnectService.dto.PostCreateDto;
+import com.example.CampusConnectService.dto.Post.PostCreateDto;
 import com.example.CampusConnectService.dto.PostResponseDto;
-import com.example.CampusConnectService.dto.PostUpdateDto;
+import com.example.CampusConnectService.dto.Post.PostUpdateDto;
 import com.example.CampusConnectService.entity.Post;
 import com.example.CampusConnectService.entity.Tag;
 import com.example.CampusConnectService.entity.User;
@@ -19,9 +19,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.nio.file.AccessDeniedException;
-import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 

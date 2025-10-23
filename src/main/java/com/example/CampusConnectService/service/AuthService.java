@@ -3,8 +3,8 @@ package com.example.CampusConnectService.service;
 
 
 
-import com.example.CampusConnectService.dto.LoginRequestDto;
-import com.example.CampusConnectService.dto.UserRegistrationDto;
+import com.example.CampusConnectService.dto.Auth.LoginRequestDto;
+import com.example.CampusConnectService.dto.Auth.UserRegistrationDto;
 import com.example.CampusConnectService.entity.User;
 import com.example.CampusConnectService.repository.UserRepository;
 import com.example.CampusConnectService.security.JwtTokenProvider;

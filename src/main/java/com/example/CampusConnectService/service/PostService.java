@@ -1,8 +1,8 @@
 package com.example.CampusConnectService.service;
 
-import com.example.CampusConnectService.dto.PostCreateDto;
+import com.example.CampusConnectService.dto.Post.PostCreateDto;
 import com.example.CampusConnectService.dto.PostResponseDto;
-import com.example.CampusConnectService.dto.PostUpdateDto;
+import com.example.CampusConnectService.dto.Post.PostUpdateDto;
 import com.example.CampusConnectService.exception.ResourceNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

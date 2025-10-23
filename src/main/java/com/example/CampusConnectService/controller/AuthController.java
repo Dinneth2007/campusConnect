@@ -1,9 +1,8 @@
 package com.example.CampusConnectService.controller;
 
-import com.example.CampusConnectService.dto.AuthResponseDto;
-import com.example.CampusConnectService.dto.LoginRequestDto;
-import com.example.CampusConnectService.dto.UserRegistrationDto;
-import com.example.CampusConnectService.entity.User;
+import com.example.CampusConnectService.dto.Auth.AuthResponseDto;
+import com.example.CampusConnectService.dto.Auth.LoginRequestDto;
+import com.example.CampusConnectService.dto.Auth.UserRegistrationDto;
 import com.example.CampusConnectService.service.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -23,7 +22,7 @@ public class AuthController {
     private final AuthService authService;
     @PostMapping("/sign-up")
     public ResponseEntity<Void> sighnUp(@Valid @RequestBody UserRegistrationDto dto){
-        User register = authService.register(dto);
+        authService.register(dto);
         return ResponseEntity.ok().build();
     }
 

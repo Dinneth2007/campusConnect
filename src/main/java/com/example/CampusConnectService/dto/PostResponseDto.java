@@ -13,6 +13,7 @@ public class PostResponseDto {
     private String title;
     private String content;
     private Long authorId;
+    private String authorName;
     private Set<String> tags;
     private Instant createdAt;
 }

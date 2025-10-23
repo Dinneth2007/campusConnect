@@ -1,6 +1,5 @@
-package com.example.CampusConnectService.dto;
+package com.example.CampusConnectService.dto.Auth;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
